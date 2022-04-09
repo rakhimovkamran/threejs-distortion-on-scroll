@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body,
+html {
+    overscroll-behavior: none;
+    background: #000000;
+    height: 100vh;
+    width: 100%;
+
+    font-family: "Cinzel", serif;
+}
+
+#main {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.scrollable {
+    will-change: transform;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container > h1 {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+
+    z-index: 5;
+
+    color: white;
+    font-size: 3rem;
+}
+
+.image-container > img {
+    position: absolute;
+    height: 60%;
+
+    visibility: hidden;
+}
+
+canvas {
+    position: fixed;
+    z-index: -1;
+
+    left: 0;
+    top: 0;
+}
